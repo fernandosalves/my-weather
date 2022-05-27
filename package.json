@@ -20,10 +20,14 @@
     "lit": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-decorators": "^7.18.2",
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "next",
+    "@rollup/plugin-replace": "^4.0.0",
     "@web/dev-server": "^0.1.28",
+    "@web/dev-server-rollup": "^0.3.17",
     "@web/dev-server-storybook": "next",
     "@web/test-runner": "^0.13.22",
     "eslint": "^7.32.0",
