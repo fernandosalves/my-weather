@@ -1,13 +1,27 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      modules: true,
+      legacyDecorators: true,
     },
-    "extends": ["eslint:recommended", "google"],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-    }
-}
+  },
+  ecmaFeatures: {
+    modules: true,
+  },
+  env: {
+    browser: true,
+    es2021: true,
+    es6: true,
+  },
+  extends: ['eslint:recommended'],
+  globals: {
+    window: true,
+    module: true,
+  },
+  rules: {
+    'require-jsdoc': 0,
+  },
+};
