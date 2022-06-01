@@ -25,6 +25,7 @@ export class MyWeather extends LitElement {
       align-items: center;
       height: 100%;
       width: 100%;
+      background-color: #303544;
     }
     .weather-container {
       flex: 0 0 35%;
