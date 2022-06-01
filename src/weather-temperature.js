@@ -54,7 +54,7 @@ export class WeatherTemperature extends LitElement {
           <div class="temperature__scale">&deg;C</div>
           <div class="temperature_high">
             <img src="../assets/icons/high.svg" /><span
-              >${this.temperatureHeigh}</span
+              >${this.temperatureHigh}</span
             >&deg;
           </div>
           <div class="temperature_low">
