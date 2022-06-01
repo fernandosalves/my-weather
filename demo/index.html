@@ -1,16 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      background: #fafafa;
-    }
-  </style>
-</head>
-<body>
-  <my-weather title="Hello There"></my-weather>
-  
-  <script type="module" src="../index.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <my-weather></my-weather>
+
+    <script type="module" src="../index.js"></script>
+  </body>
 </html>
