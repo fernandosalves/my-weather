@@ -1,13 +1,11 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('weather-location')
 export class WeatherTemperature extends LitElement {
-  @property({ type: Object }) weatherData = {};
-
-  @state({ type: String }) _location = '';
-  @state({ type: String }) _description = '';
-  @state({ type: String }) _icon = '';
+  @property({ type: String }) location = '';
+  @property({ type: String }) description = '';
+  @property({ type: String }) icon = '';
 
   static styles = css`
     :host {
@@ -42,20 +40,12 @@ export class WeatherTemperature extends LitElement {
     }
   `;
 
-  connectedCallback() {
-    super.connectedCallback();
-
-    this._location = this.weatherData.location;
-    this._description = this.weatherData.description;
-    this._icon = this.weatherData.weatherIcon;
-  }
-
   render() {
     return html`
       <div class="container">
-        <div class="location">${this._location}</div>
-        <div class="description">${this._description}</div>
-        <img class="icon" src="${this._icon}" />
+        <div class="location">${this.location}</div>
+        <div class="description">${this.description}</div>
+        <img class="icon" src="${this.icon}" />
       </div>
     `;
   }

@@ -47,7 +47,7 @@ export class WeatherService {
       data.sys.country
     );
     this.weatherData.description = data.weather[0].description;
-    this.weatherData.weatherIcon = this.getWeatherIcon(data.weather[0].id);
+    this.weatherData.icon = this.getWeatherIcon(data.weather[0].id);
   }
 
   getWeatherIcon(id) {

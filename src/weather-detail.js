@@ -1,13 +1,11 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('weather-detail')
 export class WeatherDetail extends LitElement {
-  @property({ type: Object }) weatherData = {};
-
-  @state({ type: String }) _cloudiness = '';
-  @state({ type: String }) _windSpeed = '';
-  @state({ type: String }) _humidity = '';
+  @property({ type: String }) cloudiness = '';
+  @property({ type: String }) windSpeed = '';
+  @property({ type: String }) humidity = '';
 
   static styles = css`
     :host {
@@ -36,28 +34,20 @@ export class WeatherDetail extends LitElement {
     }
   `;
 
-  connectedCallback() {
-    super.connectedCallback();
-
-    this._cloudiness = this.weatherData.cloudiness;
-    this._windSpeed = this.weatherData.windSpeed;
-    this._humidity = this.weatherData.humidity;
-  }
-
   render() {
     return html`
       <div class="container">
         <div>
           <img src="../assets/icons/cloud.svg" alt="cloudiness"></img>
-          <p>${this._cloudiness} &percnt;</p>
+          <p>${this.cloudiness} &percnt;</p>
         </div>
         <div>
           <img src="../assets/icons/wind.svg" alt="wind speed"></img>
-          <p>${this.weatherData.windSpeed} m/s</p>
+          <p>${this.windSpeed} m/s</p>
         </div>
         <div>
           <img src="../assets/icons/humidity.svg" alt="humidity"></img>
-          <p>${this.weatherData.humidity} &percnt;</p>
+          <p>${this.humidity} &percnt;</p>
         </div>
       </div>
     `;
