@@ -17,19 +17,18 @@ export class WeatherDetail extends LitElement {
       flex: 1;
       display: flex;
       flex-direction: row;
-      backdrop-filter: blur(4px);
     }
     .container > div {
       flex: 1;
       display: flex;
       flex-wrap: nowrap;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     .container > div > img {
-      width: 25px;
-      height: 25px;
+      width: 40px;
+      height: 40px;
       vertical-align: middle;
     }
   `;
