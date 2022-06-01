@@ -90,10 +90,14 @@ export class MyWeather extends LitElement {
               .temperatureLow=${this._weatherData.temperatureLow}
             ></weather-temperature>
             <weather-location
-              .weatherData="${this._weatherData}"
+              .location="${this._weatherData.location}"
+              .description="${this._weatherData.description}"
+              .icon="${this._weatherData.icon}"
             ></weather-location>
             <weather-detail
-              .weatherData="${this._weatherData}"
+              .cloudiness="${this._weatherData.cloudiness}"
+              .windSpeed="${this._weatherData.windSpeed}"
+              .humidity="${this._weatherData.humidity}"
             ></weather-detail>
           `,
           () => html`<div class="loading">forging the data</div> `
