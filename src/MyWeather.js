@@ -28,7 +28,7 @@ export class MyWeather extends LitElement {
       background-color: #303544;
     }
     .weather-container {
-      flex: 0 0 35%;
+      flex: 0 1 35%;
       display: flex;
       flex-direction: column;
       color: rgba(255, 255, 255, 0.9);
