@@ -9,7 +9,7 @@ export class WeatherTemperature extends LitElement {
 
   static styles = css`
     :host {
-      flex: 0 0 50%;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
     }

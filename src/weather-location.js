@@ -9,7 +9,7 @@ export class WeatherTemperature extends LitElement {
 
   static styles = css`
     :host {
-      flex: 1 1 30%;
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -35,8 +35,7 @@ export class WeatherTemperature extends LitElement {
       text-transform: uppercase;
     }
     .icon {
-      width: 12em;
-      padding-bottom: 9em;
+      width: 6em;
     }
   `;
 
