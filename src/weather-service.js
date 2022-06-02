@@ -13,22 +13,40 @@ export class WeatherService {
     });
   }
 
-  async getWeatherData() {
-    const position = await this.getCurrentPosition();
+  async getPositionByCity(city, country) {
+    const endpoint = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=5&appid=${this.apiKey}`;
+    const response = await fetch(endpoint);
+
+    return await response.json();
+  }
+
+  async getWeatherData(city, country) {
+    let latitude, longitude;
     let data = null;
 
+    if (city) {
+      const cityPos = await this.getPositionByCity(city, country);
+      latitude = cityPos[0].lat;
+      longitude = cityPos[0].lon;
+    } else {
+      const cityPos = await this.getCurrentPosition();
+      latitude = cityPos.coords.latitude;
+      longitude = cityPos.coords.longitude;
+    }
+
     try {
-      data = await this.getForecast(position.coords);
+      data = await this.getForecast(latitude, longitude);
     } catch (e) {
       console.log(e);
     }
+
     this.parseData(data);
 
     return this.weatherData;
   }
 
-  async getForecast(coordinates) {
-    let endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this.apiKey}&units=metric`;
+  async getForecast(latitude, longitude) {
+    let endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.apiKey}&units=metric`;
 
     let response = await fetch(endpoint);
 

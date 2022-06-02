@@ -1,5 +1,5 @@
 import { html, LitElement, css } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 
@@ -11,6 +11,8 @@ import { WeatherService } from './weather-service.js';
 
 @customElement('my-weather')
 export class MyWeather extends LitElement {
+  @property({ type: String }) city = '';
+
   @state({ type: Boolean }) _day = false;
   @state({ type: Boolean }) _isLoading = false;
   @state({ type: Object }) _weatherService = new WeatherService();
