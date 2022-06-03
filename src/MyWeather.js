@@ -3,11 +3,11 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 
-import './weather-detail';
-import './weather-temperature';
-import './weather-location';
+import './components/weather-detail';
+import './components/weather-temperature';
+import './components/weather-location';
 
-import { WeatherService } from './weather-service.js';
+import { WeatherService } from './services/weather-service.js';
 
 @customElement('my-weather')
 export class MyWeather extends LitElement {

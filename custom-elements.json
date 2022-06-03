@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyWeather",
+          "declaration": {
+            "name": "MyWeather",
+            "module": "./src/MyWeather.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/MyWeather.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyWeather",
+          "members": [
+            {
+              "kind": "field",
+              "name": "city",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "city"
+            },
+            {
+              "kind": "field",
+              "name": "_day",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "_isLoading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "_weatherService",
+              "default": "new WeatherService()"
+            },
+            {
+              "kind": "field",
+              "name": "_weatherData",
+              "type": {
+                "text": "null"
+              },
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "_dayPeriod",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "method",
+              "name": "getDayPeriod"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "city",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "city"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-weather",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyWeather",
+          "declaration": {
+            "name": "MyWeather",
+            "module": "src/MyWeather.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-weather",
+          "declaration": {
+            "name": "MyWeather",
+            "module": "src/MyWeather.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "stories/index.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Regular"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomTitle"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomCounter"
+        },
+        {
+          "kind": "variable",
+          "name": "SlottedContent"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Regular",
+          "declaration": {
+            "name": "Regular",
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomTitle",
+          "declaration": {
+            "name": "CustomTitle",
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomCounter",
+          "declaration": {
+            "name": "CustomCounter",
+            "module": "stories/index.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "SlottedContent",
+          "declaration": {
+            "name": "SlottedContent",
+            "module": "stories/index.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/weather-detail.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WeatherDetail",
+          "members": [
+            {
+              "kind": "field",
+              "name": "cloudiness",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "cloudiness"
+            },
+            {
+              "kind": "field",
+              "name": "windSpeed",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "windSpeed"
+            },
+            {
+              "kind": "field",
+              "name": "humidity",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "humidity"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "cloudiness",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "cloudiness"
+            },
+            {
+              "name": "windSpeed",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "windSpeed"
+            },
+            {
+              "name": "humidity",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "humidity"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "weather-detail",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WeatherDetail",
+          "declaration": {
+            "name": "WeatherDetail",
+            "module": "src/components/weather-detail.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "weather-detail",
+          "declaration": {
+            "name": "WeatherDetail",
+            "module": "src/components/weather-detail.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/weather-location.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WeatherTemperature",
+          "members": [
+            {
+              "kind": "field",
+              "name": "location",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "location"
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "description"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "icon"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "location",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "location"
+            },
+            {
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "description"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "icon"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "weather-location",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WeatherTemperature",
+          "declaration": {
+            "name": "WeatherTemperature",
+            "module": "src/components/weather-location.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "weather-location",
+          "declaration": {
+            "name": "WeatherTemperature",
+            "module": "src/components/weather-location.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/weather-temperature.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WeatherTemperature",
+          "members": [
+            {
+              "kind": "field",
+              "name": "temperatureValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "temperatureValue"
+            },
+            {
+              "kind": "field",
+              "name": "temperatureHigh",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "temperatureHigh"
+            },
+            {
+              "kind": "field",
+              "name": "temperatureLow",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "temperatureLow"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "temperatureValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "temperatureValue"
+            },
+            {
+              "name": "temperatureHigh",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "temperatureHigh"
+            },
+            {
+              "name": "temperatureLow",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "temperatureLow"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "weather-location",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WeatherTemperature",
+          "declaration": {
+            "name": "WeatherTemperature",
+            "module": "src/components/weather-temperature.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "weather-temperature",
+          "declaration": {
+            "name": "WeatherTemperature",
+            "module": "src/components/weather-temperature.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/services/weather-service.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "WeatherService",
+          "members": [
+            {
+              "kind": "method",
+              "name": "getCurrentPosition"
+            },
+            {
+              "kind": "method",
+              "name": "getPositionByCity",
+              "parameters": [
+                {
+                  "name": "city"
+                },
+                {
+                  "name": "country"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getWeatherData",
+              "parameters": [
+                {
+                  "name": "city"
+                },
+                {
+                  "name": "country"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getForecast",
+              "parameters": [
+                {
+                  "name": "latitude"
+                },
+                {
+                  "name": "longitude"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "parseData",
+              "parameters": [
+                {
+                  "name": "data"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getWeatherIcon",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "formatLocation",
+              "parameters": [
+                {
+                  "name": "country"
+                },
+                {
+                  "name": "city"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "isThunderstorm",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "isDrizzle",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "isRain",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "isSnow",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "apiKey",
+              "type": {
+                "text": "string"
+              },
+              "default": "'dca038ddf735a5f57854210b80314266'"
+            },
+            {
+              "kind": "field",
+              "name": "weatherData",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WeatherService",
+          "declaration": {
+            "name": "WeatherService",
+            "module": "src/services/weather-service.js"
+          }
+        }
+      ]
+    }
+  ]
+}
